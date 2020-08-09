@@ -69,13 +69,17 @@ nav a:hover{
   margin-right: auto;
   width: 100%;
 }
-#main{
+.main{
   width: auto;
   height: 720px;
   margin-top:-5px;
   left: 50%;
   border: 2px solid gold;
   border-radius: 10px 10px 10px 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 
 }
 
@@ -87,6 +91,7 @@ nav a:hover{
   transform: translate(15%, 15%);
   box-shadow: 5px 5px 5px grey;
 }
+
 
 /*css for footer/bottom*/
 .table{
@@ -186,6 +191,8 @@ nav a:hover{
   font-size: 36px;
   color: #55575a;
   font-weight: 500;
+  padding-bottom: 20px;
+  padding-top: 10px;
 }
 
 #desc
@@ -204,6 +211,8 @@ nav a:hover{
 
  margin-left: 660px;
  margin-top: -15px;
+ padding-top: 10px;
+ padding-bottom: 20px;
 
 }
 
@@ -212,8 +221,7 @@ nav a:hover{
   width:450px;
   height: 451px;
   margin-left: 938px;
-  padding-top: 50px;
-  margin-bottom: 24px;
+  margin-bottom: 27px;
 }
 
 .history
@@ -286,7 +294,7 @@ height: 400px;
 }
 .contentc
 {
-  height: 600px;
+  height: 800px;
   border: 2px solid gold;
   border-radius: 10px;
   margin-top: -9px;
@@ -306,6 +314,7 @@ height: 400px;
 {
   margin-left: 40px;
   margin-top: 30px;
+  margin-bottom: -45px;
   text-align: center;
   font-family: 'Roboto Slab', serif;
   color: black;
@@ -356,10 +365,10 @@ height: 400px;
 .contact
 {
   font-family: 'Roboto Slab', serif;
-  height: 387px;
+  height: 450px;
   text-align: left;
   margin-left: 765px;
-  margin-top: -455px;
+  margin-top: -453px;
   margin-right: 200px;
   padding-left: 50px;
   padding: 30px 30px 30px 30px;
@@ -404,7 +413,200 @@ height: 400px;
 
 .disc2gym p{
   margin-left: 50px;
+  margin-top: -6.5px;
 }
+
+/*Slidehow pictures*/
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.gymtext {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/2 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/*Login*/
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
 
 /*css for facilities*/
 .firstfacilities {
@@ -435,6 +637,71 @@ height: 400px;
   height : 450px;
   border: 2px solid gold;
   border-radius: 10px 10px 10px 10px;
+}
+
+.slideshow{
+  border: 2px solid gold;
+  border-radius: 10px 10px 10px 10px;
+  text-align: center;
+}
+.slide {
+  display: none;
+}
+.slideimage {
+  vertical-align: middle;
+  width:1000px;
+  height:350px;
+}
+.gallery {
+  border: 2px solid gold;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.slidetext {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.slidenum {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.slidedot{
+  text-align: center;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 /*css for pool and spa*/
@@ -472,4 +739,266 @@ height: 400px;
 
 .disc2 p{
   margin-left: 50px;
+}
+
+.roompic{
+  width :1515px;
+  height: 500px;
+  border: 2px solid gold;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.picture{
+    width: 1670px;
+    height: 500px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.picture1{
+    width: 1330px;
+    height: 500px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+/*Slidehow pictures*/
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.gymtext {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/2 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/*css for booking form*/
+
+.form{
+  margin: auto;
+  width: 50%;
+  border: 3px solid gold;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+.form-container{
+  background-color: #EAEAEA;
+  padding: 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+.form-header{
+  background-color: gold;
+  margin: -10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px 10px 0px 0px;
+}
+.form-body{
+  padding-top: 40px;
+  text-align: left;
+}
+#Name{
+  width: 720px;
+  padding-right: 10px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+h4{
+  font-size: 30px;
+}
+#Email{
+  width: 300px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+#Telephone{
+  margin-left: 115px;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+#Telephonetext{
+  margin-left: 315px;
+}
+#Adults{
+  width: 300px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+#Child{
+  margin-left: 115px;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+#Childtext{
+  margin-left: 290px;
+}
+
+#Checkin{
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+#Checkout{
+  margin-left: 118px;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+#Checkouttext{
+  margin-left: 319px;
+}
+.stay{
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  margin-bottom: 10px;
+}
+.onoffswitch {
+    position: relative; width: 69px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "YES";
+    padding-left: 10px;
+    background-color: #E0E03A; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "NO";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 22px; margin: 4px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 35px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+.textarea{
+  width: 725px;
+  height: 150px;
+}
+.form-footer{
+  background-color: gold;
+  margin: -10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 0px 0px 10px 10px;
+  height: 70px;
+  text-align: center;
+}
+.submitclass{
+    font-size: 20px;
+    width: 250px;
+    height: 50px;
+    margin: 10px;
+}
+input:hover[type="submit"] {
+  background-color: black;
+  color: gold;
+  transition: .5s;
+  border-radius: 20px 20px 20px 20px;
+}
+.resetclass{
+    font-size: 20px;
+    width: 250px;
+    height: 50px;
+    margin: 10px;
+}
+input:hover[type="reset"] {
+  background-color: black;
+  color: gold;
+  transition: .5s;
+  border-radius: 20px 20px 20px 20px;
 }
