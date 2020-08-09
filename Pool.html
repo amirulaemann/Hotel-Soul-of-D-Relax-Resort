@@ -24,8 +24,60 @@
         </nav>
       </div>
     </header>
-
+<header>
       <centre><img src="images/swimming pool.png" class="pic">
+</header>
+<br>
+
+<br>
+<div class="slideshow-container">
+<!-- Gym pictures -->
+<div class="mySlides fade">
+<div class="numbertext">1 / 5</div>
+<img src="images/pool1.jpg" style="width:100%">
+<div class="gymtext">Our Swimming Pool</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">2 / 5</div>
+<img src="images/pool2.jpg" style="width:100%">
+<div class="gymtext">Our Swimmimg Pool</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">3 / 5</div>
+<img src="images/pool3.jpg" style="width:100%">
+<div class="gymtext">Our Swimming Pool</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">4 / 5</div>
+<img src="images/pool4.jpg" style="width:100%">
+<div class="gymtext">Our Swimming Pool</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">5 / 5</div>
+<img src="images/pool5.jpg" style="width:100%">
+<div class="gymtext">Our Swimming Pool</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+
+<br>
+
+
+
 
     <div class="disc1">
     <ol>
@@ -99,6 +151,33 @@
 
         </td>
       </tr>
+
+      <script>
+
+      //Slideshow Gym pictures
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); // Change every 3 seconds
+      }
+
+
+      </script>
+
 
 
   </body>

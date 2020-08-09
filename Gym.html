@@ -11,6 +11,7 @@
   </head>
   <body>
     <header>
+      <!-- navigation bar -->
       <div class="Top">
         <img src="images/LogoTr.png" alt="logo" class="logo">
         <nav>
@@ -24,10 +25,32 @@
         </nav>
       </div>
     </header>
-
+    <!-- Resort picture -->
       <centre><img src="images/Resort.jpg" class="pic">
+        <br>
+      <div class="slideshow-container">
+  <!-- Gym pictures -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 2</div>
+    <img src="images/gym2.png" style="width:100%">
+    <div class="gymtext">Our Gym Room</div>
+  </div>
 
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 2</div>
+    <img src="images/gym1.png" style="width:100%">
+    <div class="gymtext">Our Gym Room</div>
+  </div>
 
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <!-- Content  -->
     <div class="disc1gym">
     <ol>
 
@@ -64,6 +87,36 @@
         <br>
         <p><center> <b>Sign out</b></center></p>
         <br>
+        <!-- Login -->
+        <center left><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/avatar1.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
         <br>
         <br>
         <br>
@@ -99,6 +152,41 @@
 
         </td>
       </tr>
+
+      <script>
+
+      //Slideshow Gym pictures
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); // Change every 3 seconds
+      }
+      //login part
+      // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+      </script>
 
 
   </body>

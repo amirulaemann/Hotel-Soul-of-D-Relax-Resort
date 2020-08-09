@@ -42,14 +42,14 @@
   <p class="descc">RESERVATION</p>
   <p class="number">
   Tel.
-  <a id="numb" href="+123456789" >
+  <a id="numb" href="tel:+123456789" >
   +123456789
   </a> <br>
-  Fax <a id="numb" href="+123456789" >
+  Fax <a id="numb" href="fax:+123456789" >
   +987654321
   </a>
   <br>
-  <a id="numb" href="reservation@drelaxresrt.com" >
+  <a id="numb" class="mailtoui" href="mailto:reservation@drelaxresrt.com?subject=RESORT%20RESERVATION.&body=Dear%20Hotel%20Manager,%20I%20would%20like%20to%20reserve%20accommodation%20for%20(room%20type)%20in%20your%20hotel%20for%20(number)%20nights%20for%20(number)%20guests.%20Details%20as%20below:">
   reservation@drelaxresrt.com
   </a></p>
   <br><br>
@@ -57,14 +57,14 @@
   <p class="desc">RESTAURANT</p>
   <p class="number">
   Tel.
-  <a id="numb" href="+234567891" >
+  <a id="numb" href="tel:+234567891" >
   +234567891
   </a> <br>
-  Fax <a id="numb" href="+876543219" >
+  Fax <a id="numb" href="fax:+876543219" >
   +876543219
   </a>
   <br>
-  <a id="numb" href="restaurant@drelaxresrt.com" >
+  <a id="numb" class="mailtoui" href="mailto:restaurant@drelaxresrt.com?subject=FOOD%20ORDER.&body=Dear%20Hotel%20Manager,%20I%20would%20like%20to%20order%20food%20for%20(room%20number).%20Details%20as%20below:" >
   restaurant@drelaxresrt.com
   </a></p>
   <br><br>
@@ -72,21 +72,21 @@
   <p class="desc">SPA</p>
   <p class="number">
   Tel.
-  <a id="numb" href="+345678912" >
+  <a id="numb" href="tel:+345678912" >
   +345678912
   </a> <br>
-  Fax <a id="numb" href="+765432198" >
+  Fax <a id="numb" href="fax:+765432198" >
   +765432198
   </a>
   <br>
-  <a id="numb" href="spa@drelaxresrt.com" >
+  <a id="numb" class="mailtoui" href="mailto:spa@drelaxresrt.com?subject=BOOK%20SPA.&body=Dear%20Hotel%20Manager,%20I%20would%20like%20to%20book%20a%20spa.%20Details%20as%20below:" >
   spa@drelaxresrt.com
   </a></p>
   <br><br>
 
   <p class="desc">MEETING & EVENT</p>
   <p class="number2">
-  <a id="numb" href="spa@drelaxresrt.com" >
+  <a id="numb" class="mailtoui" href="mailto:eventmngt@drelaxresrt.com?subject=BOOK%20BANQUET%20FOR%20EVENT.&body=Dear%20Hotel%20Manager,%20I%20would%20like%20to%20book%20a%20banquet/%20hall%20for%20an%20event.%20Details%20as%20below:" >
   eventmngt@drelaxresrt.com
   </a>
   </p>
@@ -120,6 +120,7 @@
         </td>
       </tr>
 
+      <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.3/dist/mailtoui-min.js"></script>
 
   </body>
 </html>

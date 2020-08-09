@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>D'RELAX RESORT</title>
+    <link rel = "icon" type = "image/png" href = "images/Logoweb.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styling/style.css">
+
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/additional-methods.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <div class="Top">
+        <img src="images/LogoTr.png" alt="logo" class="logo">
+        <nav>
+          <ul>
+            <li><a href="index.html"><strong>Home</strong></a></li>
+            <li><a href="Booking.html"><strong>Book Now</strong></a></li>
+            <li><a href="Facilities.html"><strong>Facilities</strong></a></li>
+            <li><a href="AboutUs.html"><strong>About Us</strong></a></li>
+            <li><a href="ContactUs.html"><strong>Contact Us</strong></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="form">
+      <div class="form-container">
+
+
+        <div class="form-header">
+          <h4>Make Room Reservations in Minutes</h4>
+        </div>
+        <div class="form-body">
+
+          <form id="bookform" method="POST">
+
+              <label for="Name"><strong>Please Enter Your Name</strong></label><br>
+              <input type="text" id="Name" placeholder="Selena Gomez" required>
+              <br>
+
+                <label for="Email" id="Emailtext"><strong>Email Address</strong></label>
+                <label for="Telephone" id="Telephonetext"><strong>Telephone / Mobile</strong></label>
+                <br>
+                <input type="email" id="Email" placeholder="SelenaGomez@gmail.com" required>
+                <input type="number" id="Telephone" placeholder="Telephone / Mobile" required>
+                <br>
+
+                <label for="numadults" id="Adultstext"><strong>Number of adults</strong></label>
+                <label for="numchild" id="Childtext"><strong>Number of children</strong></label>
+                <br>
+                <input type="number" id="Adults" placeholder="Number of adults" required>
+                <input type="number" id="Child" placeholder="Number of children" required>
+                <br>
+
+                <label for="checkin" id="Checkintext"><strong>Check-in Date</strong></label>
+                <label for="checkout" id="Checkouttext"><strong>Check-out Date</strong></label>
+                <br>
+                <input type="date" id="Checkin" placeholder="dd/mm/yyyy" required>
+                <input type="date" id="Checkout" placeholder="dd/mm/yyyy" required>
+                <br>
+
+                <p class="quest">Will you bring a pet?</p>
+                <div class="onoffswitch">
+                  <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0">
+                  <label class="onoffswitch-label" for="myonoffswitch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                  </label>
+                </div>
+
+                <p class="stay"><strong>PLEASE ANSWER THESE QUESTIONS FOR A PLEASANT STAY</strong></p>
+                <br>
+
+                <div class="section">
+                  <label for="comment" class="field-label">Anything else we should know about?</label><br>
+                    <textarea class="textarea" id="comment" name="comment" placeholder="Let us know about any special accommodation needs"></textarea>
+                  </label>
+                </div>
+                <br>
+
+                <div class="form-footer">
+                    <input onclick="myFunction()" type="submit" class="submitclass" value="Confirm Booking">
+                    <input type="reset" class="resetclass" value="Cancel">
+                </div>
+                <script>
+                function myFunction() {
+                  alert("Confirmation will be send if there is no error");
+                }
+              </script>
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      <div class="payment">
+        <img src="images/foot.jpg" alt="Payment">
+      </div>
+
+      <table class="table">
+      <tr>
+        <td width=50%>
+
+          <div class="text">
+            <a>Jalan Hang Tuah,</a>
+            <br>
+            <a>Persiaran Tunku Osman Jewa,</a>
+            <br>
+            <a>71000 Port Dickson</a>
+            <br>
+            <a>Negeri Sembilan, Malaysia</a>
+          </div>
+
+        </td>
+        <td width=50%>
+
+          <div class="follow">
+            <a class="footpic">Follow us</a>
+            <br><br>
+            <a href="https://twitter.com/explore"><img src="images/twitter.png" alt="Twitter logo" class="footpic"></a>
+            <a  href="https://www.facebook.com/"><img src="images/fb.png" alt="Facebook logo" class="footpic"></a>
+          </div>
+
+        </td>
+      </tr>
+      <script type="text/javascript">
+      $("#bookform").validate();
+
+      $("#checkin").datepicker({
+          defaultDate: "+1w",
+          changeMonth: false,
+          numberOfMonths: 1,
+          prevText: '<i class="fa fa-chevron-left"></i>',
+          nextText: '<i class="fa fa-chevron-right"></i>',
+          onClose: function( selectedDate ) {
+              $( "#checkout" ).datepicker( "option", "minDate", selectedDate );
+          }
+      });
+
+      $("#checkout").datepicker({
+          defaultDate: "+1w",
+          changeMonth: false,
+          numberOfMonths: 1,
+          prevText: '<i class="fa fa-chevron-left"></i>',
+          nextText: '<i class="fa fa-chevron-right"></i>',
+          onClose: function( selectedDate ) {
+              $( "#checkin" ).datepicker( "option", "maxDate", selectedDate );
+          }
+      });
+      </script>
+
+  </body>
+</html>
